@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-27T20:47:11 IST" name="Default suite" finished-at="2023-10-27T20:47:26 IST" duration-ms="15385">
+    <groups>
+    </groups>
+    <test started-at="2023-10-27T20:47:11 IST" name="Default test" finished-at="2023-10-27T20:47:26 IST" duration-ms="15385">
+      <class name="com.anvsystems.tests.LoginTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.anvsystems.tests.LoginTest@6f1de4c7]" started-at="2023-10-27T20:47:11 IST" name="beforeSuite" finished-at="2023-10-27T20:47:11 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.anvsystems.tests.LoginTest@6f1de4c7]" started-at="2023-10-27T20:47:11 IST" name="beforeMethod" finished-at="2023-10-27T20:47:14 IST" duration-ms="3196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTestWithValidCredentials()[pri:0, instance:com.anvsystems.tests.LoginTest@6f1de4c7]" started-at="2023-10-27T20:47:14 IST" name="loginTestWithValidCredentials" finished-at="2023-10-27T20:47:26 IST" duration-ms="11752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithValidCredentials -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.anvsystems.tests.LoginTest@6f1de4c7]" started-at="2023-10-27T20:47:26 IST" name="afterMethod" finished-at="2023-10-27T20:47:26 IST" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.anvsystems.tests.LoginTest@6f1de4c7]" started-at="2023-10-27T20:47:26 IST" name="afterSuite" finished-at="2023-10-27T20:47:26 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.anvsystems.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

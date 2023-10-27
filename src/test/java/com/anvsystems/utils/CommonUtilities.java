@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,47 +17,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class CommonUtilities {
 	
-	public Properties configData;
 	public WebDriver driver;
 	
-	/**
-	 * <p>This method reads the config and parses the same into key value pairs</p>
-	 */
-	public void readConfig() {
-		try {
-			FileInputStream fis = new FileInputStream(new File("./src/test/resources/config.properties"));
-			configData = new Properties();
-			configData.load(fis);
-			System.out.println(configData.getProperty("browser.name"));
-		} catch (IOException e) {
-			System.out.println("Unable to Read config "+e.getMessage());
-		}
+	public CommonUtilities(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void navigate(String url) {
+		driver.get(url);
 	}
 	
 	/**
-	 * <p>Launches a Fresh Instance of Browser depending on configuration</p>
+	 * <p>Clicks on provided WebElement</p>
 	 */
-	public void launchBrowser() {
-		if(configData.getProperty("browser.name").equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", configData.getProperty("browser.executable"));
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-		}else {
-			// IMPLEMENT FOR OTHER BROWSERS!
-		}
+	public void clickElement(By locatorType) {
+		driver.findElement(locatorType).click();
 	}
 	
 	/**
-	 * <p>closes current browser instance</p>
+	 * <p>Sends Keystrokes to provided WebElement</p>
 	 */
-	public void closeBrowser() {
-		driver.quit();
+	public void type(By locatorType, String value) {
+		driver.findElement(locatorType).sendKeys(value);
 	}
 	
-	public static void main(String[] args) {
-		CommonUtilities comm = new CommonUtilities();
-		comm.readConfig();
-		comm.launchBrowser();
-		comm.closeBrowser();
-	}
 }
