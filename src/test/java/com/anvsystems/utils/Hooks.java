@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class Hooks {
 	
-	public Properties configData;
+	public static Properties configData;
 	public WebDriver driver;
 	
 	@BeforeSuite
